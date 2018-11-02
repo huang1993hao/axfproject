@@ -101,6 +101,7 @@ footer .market dd {
     margin: 0.7rem;
     border-radius: 0.2rem;
     position: relative;
+    overflow: hidden;
 }
 .market .main-content .content-wrapper ul li a{
     display: block;
