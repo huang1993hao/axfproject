@@ -1,0 +1,84 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extcss %}
+    <link rel="stylesheet" href="{% static 'mine/css/registe.css' %}">
+{% endblock %}
+{% block extjs %}
+    <script src="{% static 'mine/js/registerAxf.js' %}"></script>
+{% endblock %}
+ {% block title %}
+    爱鲜蜂 | 注册
+{% endblock %}
+ {% block content %}
+    <div class="register">
+        <div class="back">
+            <a href="{% url 'axf:mine' %}">
+                <span class="glyphicon glyphicon-remove"></span>
+            </a>
+        </div>
+         <form action="{% url 'axf:registe' %}" method="post">
+            {% csrf_token %}
+            {#            账号#}
+            <div class="form-group has-feedback" id="account">
+                <div class="input-group">
+                    <div class="input-group-addon">账号</div>
+                    <input type="text" class="form-control" placeholder="数字、字母" name="account" required="required">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+                <i></i>
+            </div>
+             {#            密码#}
+            <div class="form-group" id="password">
+                <div class="input-group">
+                    <div class="input-group-addon">密码</div>
+                    <input type="password" class="form-control" placeholder="6~12位纯数字" name="password" required="required">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+                <i></i>
+            </div>
+             {#            确认密码#}
+            <div class="form-group" id="passwd">
+                <div class="input-group">
+                    <div class="input-group-addon">密码</div>
+                    <input type="password" class="form-control" placeholder="6~12位" name="passwd" required="required">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+                <i></i>
+            </div>
+             {#            名字#}
+            <div class="form-group" id="name">
+                <div class="input-group">
+                    <div class="input-group-addon">名字</div>
+                    <input type="text" class="form-control" placeholder="名字" name="name" required="required">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+                <i></i>
+            </div>
+             {#            手机号#}
+            <div class="form-group" id="phone">
+                <div class="input-group">
+                    <div class="input-group-addon">手机</div>
+                    <input type="text" class="form-control" placeholder="11位" name="phone" required="required">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+                <i></i>
+            </div>
+             {#            地址#}
+            <div class="form-group" id="addr">
+                <div class="input-group">
+                    <div class="input-group-addon">地址</div>
+                    <input type="text" class="form-control" placeholder="收货地址(默认选项)" name="addr" required="required">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+            </div>
+             {#            头像#}
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">头像</div>
+                    <input type="file" name="icon" required="required">
+                </div>
+            </div>
+             <input type="submit" id="subButton" value="注册">
+        </form>
+    </div>
+{% endblock %}

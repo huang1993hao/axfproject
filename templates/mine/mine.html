@@ -3,11 +3,118 @@
 {% block extcss %}
     <link rel="stylesheet" href="{% static 'mine/css/mine.css' %}">
 {% endblock %}
-
+{% block extjs %}
+    <script src="{% static 'mine/js/mine.js' %}"></script>
+{% endblock %}
 {% block title %}
     爱鲜蜂 | 我的
 {% endblock %}
 
 {% block content %}
-    我的
+    <div class="mine">
+        <div class="user-wrapper">
+            <div class="user-img">
+                <img src="{% static 'uploads/axf.png' %}" alt="">
+            </div>
+            <div class="user-content">
+                <p>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-user"></span>
+                        未登录
+                    </a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-certificate "></span>
+                    暂无等级
+                </p>
+                <a href="{% url 'axf:registe' %}" class="register">注册</a>
+            </div>
+        </div>
+        <div class="collect">
+            <span class="glyphicon glyphicon-pushpin "></span>
+            <i>收藏</i>
+        </div>
+        <div class="other">
+            <section class="my">
+                <span>我的订单</span>
+                <a href="#"> 查看订单 <b class="glyphicon glyphicon-chevron-right"></b> </a>
+            </section>
+             <section>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt> <b class="glyphicon glyphicon-shopping-cart"></b> </dt>
+                                <dd> 待付款 </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt> <b class="glyphicon glyphicon-thumbs-up"></b> </dt>
+                                <dd> 待收货 </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt> <b class="glyphicon glyphicon-bell
+glyphicon"></b> </dt>
+                                <dd> 待评价 </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt> <b class=" glyphicon glyphicon-bullhorn"></b> </dt>
+                                <dd> 退款 </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt> <b class="glyphicon glyphicon-compressed"></b> </dt>
+                                <dd> 优惠券 </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt> <b class="glyphicon glyphicon-earphone"></b> </dt>
+                                <dd> 收货地址 </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt> <b class="glyphicon glyphicon-phone-alt"></b> </dt>
+                                <dd> 客户反馈 </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt> <b class="glyphicon glyphicon-stats"></b> </dt>
+                                <dd> 关于我们 </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="quit">
+                <a href="#">退出</a>
+            </section>
+        </div>
+    </div>
 {% endblock %}

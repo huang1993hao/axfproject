@@ -1,8 +1,10 @@
+import uuid
+
 from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from axf.models import Wheel, Nav, Mustbuy, Shop, MainShow, Foodtypes, Goods
+from axf.models import Wheel, Nav, Mustbuy, Shop, MainShow, Foodtypes, Goods, User
 
 
 def home(request):# 首页
@@ -81,3 +83,19 @@ def cart(request):
 
 def mine(request):
     return render(request, 'mine/mine.html')
+
+
+def registe(request):
+    if request.method == 'GET':
+        return render(request,'mine/registe.html')
+    elif  request.method == 'POST':
+        user = User()
+        user.account = request.POST.get('account')
+        user.password = request.POST.get('password')
+        user.name = request.POST.get('name')
+        user.phone = request.POST.get('phone')
+        user.addr = request.POST.get('addr')
+        user.img = 'axf.png'
+        user.token = str(uuid.uuid5(uuid.uuid4(), 'register'))
+        user.save()
+        return HttpResponse('注册')
