@@ -104,9 +104,20 @@ $(function(){
     // 减操作
     $('.bt-wrapper .glyphicon-minus').click(function(){
         var goodsid = $(this).attr('goodsid')
+        $that = $(this)
         $.get('/subcart/',{'goodsid':goodsid},function(response){
             // console.log(response)
+            if(response.status == 1){
+                var number = response.number
+                if(number>0){
+                    $that.next().html(number)
+                }else{
+                    $that.hide()
+                    $that.next().hide()
+                }
 
+
+            }
         })
     })
 })

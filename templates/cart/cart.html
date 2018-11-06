@@ -3,9 +3,56 @@
 {% block extcss %}
     <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
 {% endblock %}
+{% block extjs %}
+    <script src="{% static 'cart/js/cart.js' %}"></script>
+{% endblock %}
 {% block title %}
     爱鲜蜂 | 购物车
 {% endblock %}
 {% block content %}
-    购物车
+    <div class="cart">
+        <ul>
+            {% for cart in carts %}
+                <li>
+                    <div class=".confirm-wrapper">
+                        {% if cart.isselect %}
+                            <span class="glyphicon glyphicon-ok"></span>
+                        {% else %}
+                            <span class="no"></span>
+                        {% endif %}
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="img">
+                            <img src="{{ cart.goods.productimg }}" alt="">
+                        </div>
+                        <div class="detail">
+                            <p class="name">
+                                {{ cart.goods.productlongname }}
+                            </p>
+                            <p class="price">
+                                ￥{{ cart.goods.price }}
+                            </p>
+                            <p class="num">
+                                x{{ cart.number }}
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+
+        </ul>
+        <div class="bill">
+            <div class="bill-left">
+                <div class="all">
+                    <span class="no"></span>
+                    <b>全选</b>
+                </div>
+                <div class="total">
+                    <span>总计:￥</span>
+                    <b>0</b>
+                </div>
+            </div>
+            <div class="bill-right">下单</div>
+        </div>
+    </div>
 {% endblock %}

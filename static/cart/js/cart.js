@@ -1,0 +1,3 @@
+$(function(){
+    $('.cart').width(innerWidth)
+})

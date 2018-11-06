@@ -88,7 +88,13 @@ def market(request,categoryid,childid,sortid):
 
 
 def cart(request):
-    return render(request, 'cart/cart.html')
+    token = request.session.get('token')
+    if token:
+        user = User.objects.get(token=token)
+        carts = Cart.objects.filter(user=user).exclude(number=0)
+        return render(request,'cart/cart.html',context={'carts':carts})
+    else:
+        return redirect('axf:login')
 
 
 def mine(request):
@@ -239,7 +245,11 @@ def subcart(request):
     user = User.objects.get(token=token)
     goods = Goods.objects.get(pk=goodsid)
     cart = Cart.objects.filter(user=user).filter(goods=goods).first()
+    cart.number = cart.number - 1
+    cart.save()
     responseData = {
-        'msg':'shanjianhaole'
+        'msg':'购物车减操作成功',
+        'status':1,
+        'number':cart.number
     }
     return JsonResponse(responseData)
