@@ -13,4 +13,6 @@ urlpatterns = [
     url(r'^logout/$',views.logout,name='logout'),
     url(r'^checkphone/$',views.checkphone,name='checkphone'),
     url(r'^login/$',views.login,name='login'),
+    url(r'^addcart/$',views.addcart,name='addcart'),
+    url(r'^subcart/$', views.subcart, name='subcart'),  # 购物车减操作
 ]

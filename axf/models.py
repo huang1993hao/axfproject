@@ -104,3 +104,12 @@ class User(models.Model):
     token = models.CharField(max_length=256)
     class Meta:
         db_table = 'axf_user'
+
+class Cart(models.Model):
+    user = models.ForeignKey(User)
+    goods = models.ForeignKey(Goods)
+    number = models.IntegerField()
+    isselect = models.BooleanField(default=True)
+
+    class Meta:
+        db_table = 'axf_cart'

@@ -1,6 +1,7 @@
 $(function(){
     $('.market').width(innerWidth)
     // 获取typeIndex
+
     typeIndex = $.cookie('typeIndex')
     if (typeIndex){ // 已经有点击分类
         $('.type-slider .type-item').eq(typeIndex).addClass('active')
@@ -73,4 +74,39 @@ $(function(){
         $('.bounce-view.sort-view').hide()
         $('#sortBt i').removeClass('glyphicon-triangle-bottom').addClass('glyphicon-triangle-top')
     }
+    // 购物车操作
+    $('.bt-wrapper .glyphicon-minus').hide()
+    $('.bt-wrapper .num').hide()
+     // 有商品数据的，即要显示； 否则不显示
+    $('.bt-wrapper .num').each(function(){
+        var num = parseInt($(this).html())
+        if(num){   // 有数据，即有添加购物车
+            $(this).show()
+            $(this).prev().show()
+        }
+    })
+
+     // 加操作
+    $('.bt-wrapper .glyphicon-plus').click(function () {
+        var goodsid = $(this).attr('goodsid')
+        $that = $(this)
+        $.get('/addcart/',{'goodsid':goodsid},function (response) {
+            // console.log(response)
+            if (response.status == -1){
+                window.open('/login/',target = "_self")
+            }
+            else if (response.status == 1){
+                $that.prev().show().html(response.number)
+                $that.prev().prev().show()
+            }
+        })
+    })
+    // 减操作
+    $('.bt-wrapper .glyphicon-minus').click(function(){
+        var goodsid = $(this).attr('goodsid')
+        $.get('/subcart/',{'goodsid':goodsid},function(response){
+            // console.log(response)
+
+        })
+    })
 })
