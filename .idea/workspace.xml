@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ead82e16-672b-438c-b51e-b6ad7cb374b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/mine/css/registe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/mine/js/mine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/mine/js/registerAxf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/axf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/mine/registe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1818768c-52ce-40c9-adca-77a0261823bf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1818768c-52ce-40c9-adca-77a0261823bf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/mine/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/mine/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/mine/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axf/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/axf/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/axf/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/axf/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/axf/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/axf/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/huangaxf/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/huangaxf/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/mine/css/mine.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mine/css/mine.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/mine/js/registerAxf.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/mine/js/registerAxf.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mine/mine.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mine/mine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mine/registe.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mine/registe.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,21 +52,22 @@
     <session id="-256201574">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.52" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.65" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="32" />
-          <entry key="html" value="1253" />
-          <entry key="js" value="69" />
-          <entry key="py" value="1088" />
+          <entry key="html" value="1331" />
+          <entry key="js" value="321" />
+          <entry key="py" value="2823" />
           <entry key="sql" value="1" />
           <entry key="txt" value="3" />
         </counts>
@@ -78,10 +75,10 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="32" />
-          <entry key="HTML" value="1253" />
-          <entry key="JavaScript" value="69" />
+          <entry key="HTML" value="1331" />
+          <entry key="JavaScript" value="321" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="1088" />
+          <entry key="Python" value="2823" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -93,21 +90,21 @@
           <entry key="axf_mustbuy" value="2" />
           <entry key="axf_nav" value="2" />
           <entry key="axf_shop" value="1" />
-          <entry key="axf_user" value="1" />
+          <entry key="axf_user" value="2" />
           <entry key="axf_wheel" value="4" />
-          <entry key="css" value="16" />
-          <entry key="html" value="16" />
-          <entry key="js" value="14" />
+          <entry key="css" value="17" />
+          <entry key="html" value="18" />
+          <entry key="js" value="16" />
           <entry key="py" value="8" />
           <entry key="sql" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="16" />
-          <entry key="Database Element" value="20" />
-          <entry key="HTML" value="16" />
-          <entry key="JavaScript" value="14" />
+          <entry key="CSS" value="17" />
+          <entry key="Database Element" value="21" />
+          <entry key="HTML" value="18" />
+          <entry key="JavaScript" value="16" />
           <entry key="Python" value="8" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="13" />
@@ -117,32 +114,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/axf/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2438">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/mine/js/registerAxf.js">
+        <entry file="file://$PROJECT_DIR$/templates/mine/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+            <state relative-caret-position="149">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/mine/registe.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mine/mine.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="70" column="92" selection-start-line="70" selection-start-column="92" selection-end-line="70" selection-end-column="92" />
+            <state relative-caret-position="300">
+              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -150,8 +144,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/axf/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="180">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/mine/js/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -185,13 +188,15 @@
         <option value="$PROJECT_DIR$/templates/base/base.html" />
         <option value="$PROJECT_DIR$/templates/market/market.html" />
         <option value="$PROJECT_DIR$/huangaxf/settings.py" />
-        <option value="$PROJECT_DIR$/axf/urls.py" />
-        <option value="$PROJECT_DIR$/templates/mine/mine.html" />
         <option value="$PROJECT_DIR$/static/mine/css/mine.css" />
         <option value="$PROJECT_DIR$/static/mine/js/mine.js" />
         <option value="$PROJECT_DIR$/axf/models.py" />
-        <option value="$PROJECT_DIR$/axf/views.py" />
         <option value="$PROJECT_DIR$/templates/mine/registe.html" />
+        <option value="$PROJECT_DIR$/static/mine/js/registerAxf.js" />
+        <option value="$PROJECT_DIR$/templates/mine/mine.html" />
+        <option value="$PROJECT_DIR$/axf/urls.py" />
+        <option value="$PROJECT_DIR$/axf/views.py" />
+        <option value="$PROJECT_DIR$/templates/mine/login.html" />
       </list>
     </option>
   </component>
@@ -278,11 +283,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/mine/css" />
+      <recent name="$PROJECT_DIR$/templates/mine" />
       <recent name="$PROJECT_DIR$/static/mine/js" />
+      <recent name="$PROJECT_DIR$/static/mine/css" />
       <recent name="$PROJECT_DIR$/static/uploads" />
       <recent name="$PROJECT_DIR$/static/base/js" />
-      <recent name="$PROJECT_DIR$/static/base/css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -339,7 +344,7 @@
     <frame x="67" y="25" width="733" height="575" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2633864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29088277" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -353,7 +358,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32444444" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32444444" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -544,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1818768c-52ce-40c9-adca-77a0261823bf/schema/axf/table/axf_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/axf/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="907">
@@ -563,41 +561,66 @@
         <state relative-caret-position="-334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/axf/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/mine/registe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="262">
+          <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mine/mine.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-347">
-          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/axf/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+    <entry file="das://1818768c-52ce-40c9-adca-77a0261823bf/schema/axf/table/axf_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/mine/js/registerAxf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+        <state relative-caret-position="1182">
+          <caret line="89" column="24" lean-forward="true" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mine/registe.html">
+    <entry file="file://$PROJECT_DIR$/templates/mine/mine.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="70" column="92" selection-start-line="70" selection-start-column="92" selection-end-line="70" selection-end-column="92" />
+        <state relative-caret-position="300">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/axf/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/mine/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/mine/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mine/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/axf/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2438">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

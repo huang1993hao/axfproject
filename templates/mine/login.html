@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extcss %}
+    <link rel="stylesheet" href="{% static 'mine/css/login.css' %}">
+{% endblock %}
+{% block extjs %}
+    <script src="{% static 'mine/js/login.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+    爱鲜蜂 | 登录
+{% endblock %}
+
+{% block content %}
+    <div class="login">
+        <div class="back">
+            <a href="{% url 'axf:mine' %}">
+                <span class="glyphicon glyphicon-remove"></span>
+            </a>
+        </div>
+
+        <form action="{% url 'axf:login' %}" method="post">
+            {% csrf_token %}
+            {#            账号#}
+            <div class="form-group has-feedback" id="account">
+                <div class="input-group">
+                    <div class="input-group-addon">账号</div>
+                    <input type="text" class="form-control" placeholder="数字、字母" name="account" required="required">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+                <i>{{ accountErr }}</i>
+            </div>
+
+            {#            密码#}
+            <div class="form-group" id="password">
+                <div class="input-group">
+                    <div class="input-group-addon">密码</div>
+                    <input type="password" class="form-control" placeholder="6~12位纯数字" name="password" required="required">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+                <i>{{ passwdErr }}</i>
+            </div>
+
+
+{#            <input type="submit" id="subButton" value="登录">#}
+            <div id="subButton" class="btn btn-default">
+                登录
+            </div>
+        </form>
+    </div>
+{% endblock %}

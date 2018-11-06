@@ -16,7 +16,7 @@
                 <span class="glyphicon glyphicon-remove"></span>
             </a>
         </div>
-         <form action="{% url 'axf:registe' %}" method="post">
+         <form action="{% url 'axf:registe' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {#            账号#}
             <div class="form-group has-feedback" id="account">

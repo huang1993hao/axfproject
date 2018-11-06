@@ -9,4 +9,8 @@ urlpatterns = [
     url(r'^cart/$', views.cart, name='cart'),   # 购物车
     url(r'^mine/$', views.mine, name='mine'),   # 我的
     url(r'^registe/$',views.registe,name='registe'),# 注册
+    url(r'^checkaccount/$', views.checkaccount, name='checkaccount'),  # 账号验证
+    url(r'^logout/$',views.logout,name='logout'),
+    url(r'^checkphone/$',views.checkphone,name='checkphone'),
+    url(r'^login/$',views.login,name='login'),
 ]
