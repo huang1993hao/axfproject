@@ -15,4 +15,7 @@ urlpatterns = [
     url(r'^login/$',views.login,name='login'),
     url(r'^addcart/$',views.addcart,name='addcart'),
     url(r'^subcart/$', views.subcart, name='subcart'),  # 购物车减操作
+    url(r'^changecartstatus/$', views.changecartstatus, name='changecartstatus'),
+    url(r'changecartselect/$', views.changecartselect,name='changecartselect'),
+
 ]

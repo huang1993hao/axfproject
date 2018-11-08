@@ -253,3 +253,33 @@ def subcart(request):
         'number':cart.number
     }
     return JsonResponse(responseData)
+
+
+def changecartstatus(request):
+    cartid = request.GET.get('cartid')
+    # print(cartid)
+    cart = Cart.objects.get(pk=cartid)
+    cart.isselect = not cart.isselect
+    cart.save()
+    responseData = {
+        'msg': '选中状态改变',
+        'status': 1,
+        'isselect': cart.isselect
+    }
+    return JsonResponse(responseData)
+
+
+def changecartselect(request):
+    isselect = request.GET.get('isselect')
+    # print(isselect)
+    if isselect == 'true':
+        isselect = True
+    else:
+        isselect = False
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    carts = Cart.objects.filter(user=user)
+    for cart in carts:
+        cart.isselect = isselect
+        cart.save()
+    return JsonResponse({'msg':'反选操作成功', 'status':1})
