@@ -1,0 +1,50 @@
+.orderinfo ul{
+    /*background: lightpink;*/
+    padding-bottom: 2rem;
+}
+
+.orderinfo ul li{
+    background: white;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.7rem;
+
+    display: flex;
+    height: 6rem;
+}
+
+.orderinfo ul li .content-wrapper{
+    width: 90%;
+    display: flex;
+}
+.orderinfo ul li .content-wrapper .img{
+    width: 30%;
+    line-height: 1;
+}
+.orderinfo ul li .content-wrapper .img img{
+    width: 100%;
+}
+
+.orderinfo ul li .content-wrapper .detail{
+    width: 70%;
+    font-size: 1rem;
+}
+.orderinfo ul li .content-wrapper .detail .name{
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.orderinfo ul li .content-wrapper .detail .price{
+    color: indianred;
+    font-weight: 500;
+    margin: 0.3rem 0;
+}
+.orderinfo ul li .content-wrapper .detail .num{
+    text-align: right;
+    padding-right: 0.3rem;
+}
+
+.btn{
+    width: 100%;
+}

@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extcss %}
+    <link rel="stylesheet" href="{% static 'order/css/orderinfo.css' %}">
+{% endblock %}
+{% block extjs %}
+    <script src="{% static 'order/js/orderinfo.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+    爱鲜蜂 | 订单详情
+{% endblock %}
+
+{% block content %}
+<div class="orderinfo">
+    <h3>订单号:{{ order.identifier }} </h3>
+    <ul>
+       {% for orderGoods in order.ordergoods_set.all %}
+            <li>
+                <div class="content-wrapper">
+                    <div class="img">
+                        <img src="{{ orderGoods.goods.productimg }}" alt="">
+                    </div>
+                    <div class="detail">
+                        <p class="name">
+                            {{ orderGoods.goods.productlongname }}
+                        </p>
+                        <p class="price">
+                            ￥{{ orderGoods.goods.price }}
+                        </p>
+                        <p class="num">
+                            x{{ orderGoods.number }}
+                        </p>
+                    </div>
+                </div>
+            </li>
+       {% endfor %}
+
+    </ul>
+    <button class="btn btn-success" id="pay" >付款</button>
+</div>
+{% endblock %}

@@ -63,4 +63,14 @@ $(function(){
          // 显示
         $('.bill .total b').html(parseInt(sum))
     }
+
+    //下单
+    $('#generateorder').click(function(){
+        $.get('/generateorder/',function (response) {
+            console.log(response)
+            if(response.status == 1){
+                window.open('/orderinfo/'+response.identifier+'/',target='_self')
+            }
+        })
+    })
 })

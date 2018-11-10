@@ -1,0 +1,3 @@
+$(function(){
+    $('.orderinfo').width(innerWidth)
+})

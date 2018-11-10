@@ -1,12 +1,14 @@
 import hashlib
 import os
+import random
+import time
 import uuid
 
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from axf.models import Wheel, Nav, Mustbuy, Shop, MainShow, Foodtypes, Goods, User, Cart
+from axf.models import Wheel, Nav, Mustbuy, Shop, MainShow, Foodtypes, Goods, User, Cart, Order, OrderGoods
 from huangaxf import settings
 
 
@@ -283,3 +285,34 @@ def changecartselect(request):
         cart.isselect = isselect
         cart.save()
     return JsonResponse({'msg':'反选操作成功', 'status':1})
+
+
+def generateorder(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    order = Order()
+    order.user = user
+    order.identifier = str(int(time.time())) + str(random.randrange(10000,100000))
+    order.save()
+    # 订单商品
+    carts = Cart.objects.filter(user=user).filter(isselect=True)
+    for cart in carts:
+        orderGoods = OrderGoods()
+        orderGoods.order = order
+        orderGoods.goods = cart.goods
+        orderGoods.number = cart.number
+        orderGoods.save()
+        # 从购物车移除
+        cart.delete()
+    responseData = {
+        'msg':'订单生成成功',
+        'status':1,
+        'identifier':order.identifier
+    }
+    return JsonResponse(responseData)
+
+
+def orderinfo(request,identifier):
+    order = Order.objects.get(identifier=identifier)
+
+    return render(request,'order/orderinfo.html',context={'order':order})
