@@ -128,3 +128,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/uploads')
+
+# key
+ALIPAY_ROOT = os.path.join(BASE_DIR,'static/key')

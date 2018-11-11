@@ -8,6 +8,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
+from axf.alipay import alipay_axf
 from axf.models import Wheel, Nav, Mustbuy, Shop, MainShow, Foodtypes, Goods, User, Cart, Order, OrderGoods
 from huangaxf import settings
 
@@ -103,12 +104,16 @@ def mine(request):
     token = request.session.get('token')
     if token:
         user = User.objects.get(token=token)
+        orders = Order.objects.filter(user=user).filter(status=1)
+        waitpay = orders.count()
         responseData = {
             'name':user.name,
             'rank':user.rank,
             'img':'/static/uploads/' + user.img,
-            'isLogin':1
+            'isLogin':1,
+            'waitpay':waitpay,
         }
+
     else:
         responseData = {
             'name':'未登录',
@@ -316,3 +321,38 @@ def orderinfo(request,identifier):
     order = Order.objects.get(identifier=identifier)
 
     return render(request,'order/orderinfo.html',context={'order':order})
+
+
+def notifyurl(request):
+    print('xxx 订单支付成功，请发货')
+    identifier = request.GET.get('out_trade_no')
+    order = Order.objects.get(identifier=identifier)
+    order.status = 2
+    order.save()
+    return JsonResponse({'msg':'success'})
+
+
+def returnurl(request):
+    # print('xxx dingdanzhifuchenggong,jinxingyemiantiaozhuan')
+
+    return render(request,'mine/mine.html')
+
+
+def pay(request):
+    identifier = request.GET.get('identifier')
+    # print(identifier)
+    order = Order.objects.get(identifier=identifier)
+    total = 0
+    for ordergoods in order.ordergoods_set.all():
+        number = ordergoods.number
+        price = ordergoods.goods.price
+        doloar = int(number) * int(price)
+        total += doloar
+    url = alipay_axf.direct_pay(
+        subject='测试订单 --- iphone X',  # 订单名称
+        out_trade_no=identifier,  # 订单号
+        total_amount=total,  # 付款金额
+        return_url='http://39.105.177.201/returnurl/'
+    )
+    alipay_url = 'https://openapi.alipaydev.com/gateway.do?{data}'.format(data=url)
+    return JsonResponse({'alipay_url':alipay_url})

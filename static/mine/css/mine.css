@@ -87,6 +87,7 @@ footer .mine dd {
 .mine .other section ul li dl{
     text-align: center;
      margin-bottom: 0;
+    position:relative;
 }
 .mine .other section ul li dl dt{
     width:100%;
@@ -104,14 +105,14 @@ footer .mine dd {
     color: grey;
 }
 
-section ul li .item{
-    position: relative;
-}
+/*section ul li .item{*/
+    /*position: relative;*/
+/*}*/
 
-section ul li dl dt .badge{
-    background: red;
-    color: white;
+section .badge{
+    /*background: red;*/
+    /*color: white;*/
     position: absolute;
-    right: 10px;
-    top: 0;
+    right: 8px;
+    top:-4px;
 }
